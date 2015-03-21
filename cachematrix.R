@@ -40,4 +40,26 @@ cacheSolve <- function(x, ...) {
     inv
 }
 
+## Sample run:
+## > x <- rbind(c(2,4),c(4,2))
+## > m <- makeCacheMatrix(x)
+## > m$get()
+##      [,1] [,2]
+## [1,]    2    4
+## [2,]    4    2
+## 
+## No Inverse Matrix
+## 
+## > cacheSolve(m)
+##            [,1]       [,2]
+## [1,] -0.1666667  0.3333333
+## [2,]  0.3333333 -0.1666667
+## 
+## Inverse Matrix exists
+## 
+## > cacheSolve(m)
+## getting cached data.
+##            [,1]       [,2]
+## [1,] -0.1666667  0.3333333
+## [2,]  0.3333333 -0.1666667
 
